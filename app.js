@@ -15,6 +15,8 @@ mongoose
     console.log("Mongodb Connection Failed");
   });
 
+require("./Models/users.model");
+
 app.use(errorHandler);
 
 app.listen(8000, () => {
