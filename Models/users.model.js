@@ -27,6 +27,9 @@ const usersSchema = new mongoose.Schema(
         ref: "products",
       },
     ],
+    reset_code: {
+      type: Number,
+    },
   },
   {
     timestamps: true,
