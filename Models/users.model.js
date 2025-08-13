@@ -19,11 +19,14 @@ const usersSchema = new mongoose.Schema(
     phone: {
       type: String,
       required: true,
+      unique: true,
     },
-    cartItems: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "products",
-    },
+    cartItems: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "products",
+      },
+    ],
   },
   {
     timestamps: true,
