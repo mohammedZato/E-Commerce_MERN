@@ -14,7 +14,7 @@ const forgotPassword = async (req, res) => {
   });
   if (!getUser) throw "Email does not exist";
 
-  const reset_code = Math.floor(1000 + Math.random() * 90000);
+  const reset_code = Math.floor(1000 + Math.random() * 9000);
 
   emailManager(
     getUser.email,
