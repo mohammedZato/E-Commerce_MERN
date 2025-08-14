@@ -17,6 +17,7 @@ mongoose
   });
 
 require("./Models/users.model");
+require("./Models/products.model");
 
 app.use(express.json());
 app.use("/api/users", userRoutes);
