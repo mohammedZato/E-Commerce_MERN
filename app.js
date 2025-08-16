@@ -19,6 +19,7 @@ mongoose
 
 require("./Models/users.model");
 require("./Models/products.model");
+require("./Models/review.model");
 
 app.use(express.json());
 
