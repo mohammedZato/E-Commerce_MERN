@@ -6,6 +6,7 @@ const getAllProducts = async (req, res) => {
   const allProducts = await productsModel.find({
     ...req.query,
   });
+
   res.status(200).json({
     status: "all products",
     allProducts,
