@@ -5,6 +5,7 @@ const errorHandler = require("./Handlers/errorHandler");
 const mongoose = require("mongoose");
 const userRoutes = require("./Modules/Users/Controller/users.route");
 const productsRoutes = require("./Modules/Products/Controller/products.routes");
+const reviewsRoutes = require("./Modules/Reviews/Controller/review.routes");
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 app.use("/api/products", productsRoutes);
+app.use("/api/reviews", reviewsRoutes);
 
 app.use(errorHandler);
 
