@@ -5,6 +5,7 @@ const getAllProducts = require("../getAllProduct");
 const authorizedRoles = require("../../../Middleware/authorizeRoles");
 const addProduct = require("../addProduct");
 const deleteProduct = require("../deleteProduct");
+const updateProduct = require("../editProduct");
 
 const productsRoutes = express.Router();
 
@@ -19,5 +20,6 @@ productsRoutes.use(authorizedRoles("admin"));
 //protected routes
 productsRoutes.post("/addProduct", addProduct);
 productsRoutes.delete("/:productId", deleteProduct);
+productsRoutes.patch("/editProduct", updateProduct);
 
 module.exports = productsRoutes;
