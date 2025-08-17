@@ -7,6 +7,9 @@ const getSingleProduct = async (req, res) => {
 
   if (!validator.isMongoId(productId)) throw "Invalid product ID";
 
+  const getProduct = await productsModel.findById(productId);
+  if (!getProduct) throw "Product does not exist";
+
   const singleProduct = await productsModel
     .findById(productId)
     .populate("reviews");

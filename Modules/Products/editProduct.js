@@ -14,6 +14,9 @@ const updateProduct = async (req, res) => {
   if (!stock) throw "Stock is required";
   if (typeof stock !== "number") throw "Stock must be a number";
 
+  const getProduct = await productsModel.findById(productId);
+  if (!getProduct) throw "Product does not exist";
+
   await productsModel.updateOne(
     {
       _id: productId,
