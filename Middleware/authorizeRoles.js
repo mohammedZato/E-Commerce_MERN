@@ -5,6 +5,7 @@ const authorizedRoles = (...roles) => {
         status: "Forbidden",
         message: `Role (${req.user.role}) is not authorized to access this resource`,
       });
+      return;
     }
     next();
   };

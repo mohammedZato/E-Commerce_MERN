@@ -6,6 +6,6 @@ const reviewsRoutes = express.Router();
 
 reviewsRoutes.use(authHandler);
 
-reviewsRoutes.post("/addReview", addReview);
+reviewsRoutes.post("/:productId/addReview", addReview);
 
 module.exports = reviewsRoutes;

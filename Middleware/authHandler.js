@@ -11,6 +11,7 @@ const authHandler = (req, res, next) => {
     res.status(401).json({
       status: "Unauthorised",
     });
+    return;
   }
 
   next();
