@@ -18,8 +18,8 @@ productsRoutes.use(authHandler);
 productsRoutes.use(authorizedRoles("admin"));
 
 //protected routes
-productsRoutes.post("/addProduct", addProduct);
-productsRoutes.delete("/:productId", deleteProduct);
-productsRoutes.patch("/editProduct", updateProduct);
+productsRoutes.post("/admin/addProduct", addProduct);
+productsRoutes.delete("/admin/:productId", deleteProduct);
+productsRoutes.patch("/admin/editProduct", updateProduct);
 
 module.exports = productsRoutes;
