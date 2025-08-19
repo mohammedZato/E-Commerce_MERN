@@ -47,27 +47,27 @@ const ordersSchema = new mongoose.Schema(
       },
     },
     paymentInfo: {
-      id: {
+      payment_id: {
         type: String, // Stripe or Paypal transaction ID
       },
-      status: {
+      payment_status: {
         type: String, // paid failed refunded
       },
     },
-    itemsPrice: {
+    items_price: {
       // total price of items only
       type: String,
       required: true,
     },
-    shippingPrice: {
+    shipping_price: {
       type: String,
       required: true,
     },
-    totalPrice: {
+    total_price: {
       type: String,
       required: true,
     },
-    orderStatus: {
+    order_status: {
       type: String,
       enum: ["pending", "processing", "shipped", "delivered", "cancelled"],
       default: "pending",
