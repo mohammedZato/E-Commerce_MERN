@@ -5,8 +5,7 @@ const addReview = async (req, res) => {
   const reviewsModel = mongoose.model("reviews");
   const productsModel = mongoose.model("products");
 
-  const { body } = req.body;
-  const { productId } = req.params;
+  const { body, productId } = req.body;
 
   if (!body) throw "Review body is required";
   if (!validator.isMongoId(productId)) throw "Invalid Product ID";

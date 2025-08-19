@@ -7,7 +7,7 @@ const cartsRoutes = express.Router();
 
 cartsRoutes.use(authHandler);
 
-cartsRoutes.post("/addtocart/:productId", addToCart);
+cartsRoutes.post("/addtocart", addToCart);
 cartsRoutes.delete("/removefromcart/:cartitemId", removeFromCart);
 
 module.exports = cartsRoutes;

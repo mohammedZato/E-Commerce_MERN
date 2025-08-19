@@ -9,7 +9,7 @@ const reviewsRoutes = express.Router();
 reviewsRoutes.use(authHandler);
 reviewsRoutes.use(authorizedRoles("admin", "user"));
 
-reviewsRoutes.post("/:productId/addReview", addReview);
+reviewsRoutes.post("/addReview", addReview);
 reviewsRoutes.delete("/:reviewId/deleteReview", deleteReview);
 
 module.exports = reviewsRoutes;

@@ -4,7 +4,7 @@ const validator = require("validator");
 const addToCart = async (req, res) => {
   const cartsModel = mongoose.model("carts");
   const usersModel = mongoose.model("users");
-  const { productId } = req.params;
+  const { productId } = req.body;
 
   if (!validator.isMongoId(productId)) throw "Invalid product ID";
 
