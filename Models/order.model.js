@@ -54,7 +54,7 @@ const ordersSchema = new mongoose.Schema(
         type: String, // paid failed refunded
       },
     },
-    items_price: {
+    itemsPrice: {
       // total price of items only
       type: String,
       required: true,
@@ -63,7 +63,7 @@ const ordersSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    total_price: {
+    totalPrice: {
       type: String,
       required: true,
     },
