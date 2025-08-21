@@ -20,6 +20,6 @@ productsRoutes.use(authorizedRoles("admin"));
 //protected routes
 productsRoutes.post("/admin/addProduct", addProduct);
 productsRoutes.delete("/admin/:productId", deleteProduct);
-productsRoutes.patch("/admin/editProduct", updateProduct);
+productsRoutes.patch("/admin/editProduct/:productId", updateProduct);
 
 module.exports = productsRoutes;

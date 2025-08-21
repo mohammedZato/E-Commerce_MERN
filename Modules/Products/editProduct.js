@@ -3,7 +3,8 @@ const validator = require("validator");
 
 const updateProduct = async (req, res) => {
   const productsModel = mongoose.model("products");
-  const { productId, price, rating, stock } = req.body;
+  const { price, rating, stock } = req.body;
+  const { productId } = req.params;
 
   if (!validator.isMongoId(productId)) throw "Invalid Product ID";
   if (!productId) throw "Product ID is required";
